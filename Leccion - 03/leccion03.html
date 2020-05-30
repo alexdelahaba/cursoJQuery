@@ -56,18 +56,18 @@
 	<script>
 		$("#boton1").on("click", function () {
 			console.log('Clickaste en el botón');
-		})
+		});
 		$(".img100").on("mouseenter", function () {
 			console.log('El cursor está sobre la imagen');
 			$(this).attr("src", "img/nophoto.jpg")
-		})
+		});
 		$(".img100").on("mouseleave", function () {
 			console.log('El cursor ya no está sobre la imagen');
 			$(this).attr("src", "img/profesor.jpg")
-		})
+		});
 		$(".divRojo").on("mouseenter", function () {
 			console.log('Cursor sobre el div rojo');
-		})
+		});
 
 		$("#linkUdemy").on("click", function (e) {
 			// Previene el comportamiento predeterminado del elemento
@@ -76,11 +76,11 @@
 			var link = $(this).attr("href");
 			console.log(link);
 			window.location = link;
-		})
+		});
 
 		$(document).ready(function () {
 			console.log('Página cargada');
-		})
+		});
 	</script>
 
 

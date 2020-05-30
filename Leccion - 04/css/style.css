@@ -1,0 +1,14 @@
+dd {
+    margin: 0;
+    padding: 10px;
+}
+dl {
+    width: 300px;
+}
+
+dt {
+    cursor: pointer;
+    font-size: 18px;
+    background-color: lightgray;
+    border-bottom: gray;
+}
