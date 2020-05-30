@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type"
+		  content="text/html; charset=UTF-8" />
+	<title>Objetos 101</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet"
+		  href="css/bootstrap.min.css">
+
+	<link rel="stylesheet"
+		  href="css/style.css">
+
+</head>
+
+<body>
+
+
+	<div class="container text-center">
+
+		<h1>Objetos 101: <small>Comprendiendo lo básico</small></h1>
+		<hr>
+
+		<button id="btnEncender"
+				class="btn btn-success">Encender</button>
+		<button id="btnApagar"
+				class="btn btn-danger">Apagar</button>
+	</div>
+
+
+
+	<script>
+		var vehiculo = {
+			llantas: 4,
+			puertas: 5,
+			fabricante: {
+				creador: "Toyota",
+				telefono: 876521011,
+				direccion: "Calle industria minera"
+			},
+			colores: ["rojo", "negro", "blanco", "azul"],
+			encendido: false,
+
+
+			arrancar: function () {
+				if (vehiculo.encendido) {
+					console.log("El vehiculo ya estaba arrancado");
+				}
+				else {
+					vehiculo.encendido = true; //esto es igual a this.encendido = true 
+					console.log("El vehiculo ha arrancado" + vehiculo.encendido);
+				}
+
+			},
+
+			parar: function () {
+				if (!vehiculo.encendido) {
+					console.log("El vehiculo ya estaba parado");
+				}
+				else {
+					vehiculo.encendido = false; //esto es igual a this.encendido = true 
+					console.log("El vehiculo ha parado" + vehiculo.encendido);
+				}
+
+			}
+		};
+
+
+		$("#btnEncender").on("click", function () {
+			vehiculo.arrancar();
+		});
+
+
+		$("#btnApagar").on("click", function () {
+			vehiculo.parar();
+		});
+
+	</script>
+
+
+</body>
+
+</html>
